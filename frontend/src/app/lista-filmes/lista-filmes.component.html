@@ -1,0 +1,17 @@
+<h2>Filmes Populares no Brasil</h2>
+
+<ul>
+  <li *ngFor="let filme of filmes">
+    <img [src]="'https://image.tmdb.org/t/p/w200' + filme.poster_path" alt="Capa do Filme">
+    <div class="movie-details">
+      <div class="movie-title">{{ filme.title }}</div>
+      <div class="movie-overview">{{ filme.overview }}</div>
+    </div>
+  </li>
+</ul>
+
+<div class="pagination">
+  <button [disabled]="paginaAtual === 1" (click)="paginaAnterior()">Anterior</button>
+  <span>{{ paginaAtual }} / {{ totalPaginas }}</span>
+  <button [disabled]="paginaAtual === totalPaginas" (click)="proximaPagina()">Próxima</button>
+</div>
