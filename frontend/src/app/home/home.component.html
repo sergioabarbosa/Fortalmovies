@@ -1,0 +1,30 @@
+<!-- Home page -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Home</h1>
+      
+      <div class="login-form">
+        <form>
+          <div class="form-group">
+            <input type="text" id="username" name="username" class="form-control" placeholder="Digite seu nome de usuário" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+          </div>
+          
+          <button (click)="login" type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+      
+      <p class="description">This is the home page.</p>
+      
+      <nav>
+        <a routerLink="/movies">Filmes Top 10+</a>
+        <a routerLink="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</div>

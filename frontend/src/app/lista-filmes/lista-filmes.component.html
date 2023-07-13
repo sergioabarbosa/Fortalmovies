@@ -1,4 +1,4 @@
-<h2>Filmes Populares no Brasil</h2>
+<h2>Top 10 Filmes Mais Populares no Brasil</h2>
 
 <ul>
   <li *ngFor="let filme of filmes">
@@ -6,12 +6,8 @@
     <div class="movie-details">
       <div class="movie-title">{{ filme.title }}</div>
       <div class="movie-overview">{{ filme.overview }}</div>
+      <!-- Botão de curtir -->
+    <button (click)="curtirFilme(filme)" class="btn-curtir">Curtir</button>
     </div>
   </li>
 </ul>
-
-<div class="pagination">
-  <button [disabled]="paginaAtual === 1" (click)="paginaAnterior()">Anterior</button>
-  <span>{{ paginaAtual }} / {{ totalPaginas }}</span>
-  <button [disabled]="paginaAtual === totalPaginas" (click)="proximaPagina()">Próxima</button>
-</div>
